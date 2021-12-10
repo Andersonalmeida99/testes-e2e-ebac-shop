@@ -10,21 +10,16 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         E validando minha compra ao final */
 
     beforeEach(() => {
-        cy.visit('http:/lojaebac.ebaconline.art.br/produtos/')
+        cy.visit('minha-conta')
     });
 
     it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
-        cy.get('[class="product-block grid"]')
-            // .first()
-            // .last()
-            // .eq(3)
-            .contains('Ariel Roll Sleeve Sweatshirt')
-            .click()
+        cy.get('#username').type('aluno_ebac@teste.com')
+        cy.get('#password').type('teste@teste.com')
+        cy.get('.woocommerce-form > .button').click()
 
-    });
-
-    it('Deve adicionar produtos ao carrinho', () => {
-        var quantidade = 3
+        cy.visit('produtos')
+        var quantidade = 2
 
         cy.get('[class="product-block grid"]')
             .contains('Ariel Roll Sleeve Sweatshirt').click()
@@ -36,24 +31,42 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
         cy.get('.woocommerce-message').should('contain', quantidade + ' × “Ariel Roll Sleeve Sweatshirt” foram adicionados no seu carrinho.')
 
+        cy.visit('produtos')
+        cy.addProdutos('Aero Daily Fitness Tee', 'M', 'Brown', '2')
+
+        cy.visit('produtos')
+        cy.addProdutos('Abominable Hoodie', 'M', 'Red', '1')
+
+        cy.visit('produtos')
+        cy.addProdutos('Aether Gym Pant', '36', 'Green', '2')
+        cy.get('.woocommerce-message > .button').click()
+
+        cy.visit('checkout')
+        cy.get('#terms').click()
+        cy.get('#place_order').click({ force: true })
+
+
+
+
+
+
+
+
     });
 
-    it('Deve adicionar produtos ao carrinho - Usando o camando customizado', () => {
-        cy.addProdutos('Aero Daily Fitness Tee', 'M', 'Black', '2') 
-    
-    });
 
-    it('Deve adicionar produtos ao carrinho - Usando o camando customizado', () => {
-        cy.addProdutos('Abominable Hoodie', 'M', 'Green', '2') 
-    
-    });
 
-    it('Deve adicionar produtos ao carrinho - Usando o camando customizado', () => {
-        cy.addProdutos('Aether Gym Pant', '36', 'Green', '2') 
-    
-    });
 
-    
-    
-}) 
+
+
+
+
+
+
+})
+
+
+
+
+
 
