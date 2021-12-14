@@ -1,24 +1,24 @@
 {
-  "name": "teste-ebac-ui",
+  "name": "testes-e2e-ebac",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "npx cypress open",
-    "cy:run": "npx cypress run",
+    "cy:run": "npx cypress run  --browser chrome",
     "cy:dashboard": "",
     "cy:report": ""
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/Andersonalmeida99/testes-e2e-ebac-shop.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": ""
+  "license": "Isc",
+   "Bugs": {
+    "url": "https://github.com/Andersonalmeida99/testes-e2e-ebac-shop.git"
   },
   "homepage": "",
   "devDependencies": {
