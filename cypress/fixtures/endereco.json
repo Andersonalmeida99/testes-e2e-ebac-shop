@@ -1,0 +1,54 @@
+[
+    {
+        "nome": "João",
+        "sobrenome": "Almeida",
+        "empresa": "Ebac",
+        "endereco": "Rua Santos",
+        "numero": "510",
+        "pais": "Brasil",
+        "cidade": "São Carlos",
+        "estado": "São Paulo",
+        "cep": "023477-937",
+        "telefone": "4567-2525",
+        "emai": "joaoal@email.com.br"
+    },
+    {
+        "nome": "Maria",
+        "sobrenome": "Almeida",
+        "empresa": "Zandrines",
+        "endereco": "Rua Brasil",
+        "numero": "5",
+        "pais": "Brasil",
+        "cidade": "Santo André",
+        "estado": "São Paulo",
+        "cep": "193277-009",
+        "telefone": "97457-0643",
+        "emai": "zandrines@email.com.br"
+    },
+    {
+        "nome": "Samantha",
+        "sobrenome": "Gerbelli",
+        "empresa": "Dr Hato",
+        "endereco": "Av D. PedroII",
+        "numero": "500",
+        "pais": "Brasil",
+        "cidade": "Santo André",
+        "estado": "São Paulo",
+        "cep": "12356-567",
+        "telefone": "90347-9763",
+        "emai": "samantha@emailteste.com.br"
+    },
+    {
+        "nome": "Alex",
+        "sobrenome": "Miranda",
+        "empresa": "Ebacl22",
+        "endereco": "Rua 7",
+        "numero": "1000",
+        "pais": "Brasil",
+        "cidade": "Atibaia",
+        "estado": "São Paulo",
+        "cep": "02097-955",
+        "telefone": "98887-0001",
+        "emai": "alex.miranda@ebac.com.br"
+    }
+]
